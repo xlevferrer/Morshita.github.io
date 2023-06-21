@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frases para Mi Novia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .quote {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: rgb(192, 239, 255);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ff66a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Frases para Mi Novia</h1>
+    <p class="quote" id="quote-of-the-day">Carga una frase nueva haciendo clic en el botón.</p>
+    <button class="button" onclick="generateQuote()">Cargar Frase</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Eres la razón de mi sonrisa.",
+      "Cada día contigo es un regalo.",
+      "Tú eres mi refugio en los días difíciles.",
+      "Juntos, somos invencibles.",
+      "No hay distancia que pueda separarnos.",
+      "Eres la persona más hermosa, por dentro y por fuera.",
+      "Mi amor por ti crece más y más cada día.",
+      "Eres mi sueño hecho realidad.",
+      "Tu amor ilumina mi vida.",
+      "Gracias por ser mi compañera y amiga fiel."
+    ];
+
+    function generateQuote() {
+      const quoteElement = document.getElementById("quote-of-the-day");
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteElement.textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
